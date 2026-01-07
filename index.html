@@ -248,6 +248,10 @@
             animation: fadeInUp 1s ease-out 0.4s both;
         }
         
+        .button-text-mobile {
+            display: none;
+        }
+        
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -498,8 +502,18 @@
             }
             
             .cta-button.top-right {
-                top: 30px;
-                right: 30px;
+                top: 20px;
+                right: 20px;
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+            
+            .button-text-full {
+                display: none;
+            }
+            
+            .button-text-mobile {
+                display: inline;
             }
             
             .section {
@@ -864,7 +878,8 @@
     <!-- Hero Section -->
     <section class="hero" aria-label="Hero section">
         <a href="https://apps.apple.com/no/app/dreams-of-aurora/id6756571880" class="cta-button top-right" aria-label="Download Dreams of Aurora from the App Store">
-            Download on the App Store
+            <span class="button-text-full">Download on the App Store</span>
+            <span class="button-text-mobile">App Store</span>
         </a>
         
         <div class="hero-content">
