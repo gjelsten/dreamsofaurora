@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Dreams of Aurora Team
+Contact: https://dreamsofaurora.com
+
+/* THANKS */
+Fonts: Google Fonts (Cinzel)
+Inspiration: Beautiful bedtime stories for children
+
+/* SITE */
+Last update: 2026/01/07
+Standards: HTML5, CSS3, JavaScript
+Components: WebGL, Canvas API
+Software: Vanilla JavaScript
+

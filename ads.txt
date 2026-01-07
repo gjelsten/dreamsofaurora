@@ -1,0 +1,4 @@
+# ads.txt file for Dreams of Aurora
+# This file is used to declare authorized digital sellers
+# Currently no ad networks are used
+

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Dreams of Aurora - Bedtime Stories | Beautiful Stories, Soothing Narration</title>
+    <meta name="title" content="Dreams of Aurora - Bedtime Stories | Beautiful Stories, Soothing Narration">
+    <meta name="description" content="Make bedtime effortless and magical. Beautiful bedtime stories with professional narration, calming aurora backgrounds, and automatic playback. Try 5 free stories. Download Dreams of Aurora for iPhone and iPad.">
+    <meta name="keywords" content="bedtime stories for kids, sleep stories, automatic bedtime stories, kids bedtime routine, audiobook stories, narrated stories children, calming bedtime app, bedtime made easy, peaceful bedtime, quality time stories">
+    <meta name="author" content="Dreams of Aurora">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dreamsofaurora.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dreamsofaurora.com/">
+    <meta property="og:title" content="Dreams of Aurora - Bedtime Stories | Beautiful Stories, Soothing Narration">
+    <meta property="og:description" content="Beautiful stories. Soothing narration. Magic every night. Make bedtime effortless and magical with professional narration and calming aurora backgrounds.">
+    <meta property="og:image" content="https://dreamsofaurora.com/images/iPhone.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dreams of Aurora - Bedtime Stories App">
+    <meta property="og:site_name" content="Dreams of Aurora">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dreamsofaurora.com/">
+    <meta name="twitter:title" content="Dreams of Aurora - Bedtime Stories">
+    <meta name="twitter:description" content="Beautiful stories. Soothing narration. Magic every night. Make bedtime effortless and magical.">
+    <meta name="twitter:image" content="https://dreamsofaurora.com/images/iPhone.jpg">
+    <meta name="twitter:image:alt" content="Dreams of Aurora - Bedtime Stories App">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/iPhone.jpg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0e27">
+    <meta name="msapplication-TileColor" content="#0a0e27">
+    
+    <!-- Additional SEO -->
+    <meta name="language" content="English">
+    <meta name="geo.region" content="US">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Google Fonts - Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Dreams of Aurora",
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      },
+      "description": "Beautiful bedtime stories with professional narration, calming aurora backgrounds, and automatic playback. Make bedtime effortless and magical.",
+      "screenshot": "https://dreamsofaurora.com/images/iPhone.jpg",
+      "url": "https://dreamsofaurora.com",
+      "downloadUrl": "https://apps.apple.com/no/app/dreams-of-aurora/id6756571880",
+      "softwareVersion": "1.0",
+      "releaseNotes": "Welcome to Dreams of Aurora. Start with 5 free stories and discover the magic of effortless bedtime."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dreams of Aurora",
+      "url": "https://dreamsofaurora.com",
+      "description": "Beautiful bedtime stories with professional narration, calming aurora backgrounds, and automatic playback.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dreamsofaurora.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dreams of Aurora",
+      "url": "https://dreamsofaurora.com",
+      "logo": "https://dreamsofaurora.com/images/iPhone.jpg",
+      "sameAs": [
+        "https://apps.apple.com/no/app/dreams-of-aurora/id6756571880"
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            overflow-x: hidden;
+            background: #0a0e27;
+        }
+        
+        /* Aurora Background */
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #0a0e27;
+        }
+        
+        #aurora-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+        }
+        
+        /* Twinkling Stars Canvas */
+        #stars-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Logo in top left */
+        .logo {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            z-index: 10;
+            font-family: 'Cinzel', serif;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out;
+            line-height: 1.2;
+            text-align: left;
+        }
+        
+        .logo-top {
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            text-align: center;
+            margin-left: 0;
+        }
+        
+        .logo-bottom {
+            font-size: 2.5rem;
+            font-weight: 600;
+            display: block;
+            text-align: center;
+            margin-left: 0;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+            padding: 200px 20px 40px;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero .subtitle {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: rgba(255,255,255,0.95);
+            color: #0a0e27;
+            padding: 16px 36px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .cta-button.top-right {
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+            background: #ffffff;
+        }
+        
+        /* Hero Images */
+        .hero-images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-images img {
+            width: calc(50% - 10px);
+            max-width: calc(50% - 10px);
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        
+        @media (min-width: 1600px) {
+            .hero-images {
+                max-width: 1600px;
+            }
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 100px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .section p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        
+        .section p.lead {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            line-height: 1.3;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            padding: 40px 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        .feature-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+        }
+        
+        /* Compact Info Section */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .info-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .info-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+        
+        .info-item p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 120px 20px;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(10px);
+            color: rgba(255,255,255,0.8);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                top: 30px;
+                left: 30px;
+            }
+            
+            .logo-top {
+                font-size: 1rem;
+            }
+            
+            .logo-bottom {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 2.2rem;
+            }
+            
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+            
+            .cta-button.top-right {
+                top: 30px;
+                right: 30px;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .section p.lead {
+                font-size: 2.2rem;
+            }
+            
+            .info-grid {
+                gap: 30px;
+                margin-top: 40px;
+            }
+            
+            .info-item {
+                padding: 30px 20px;
+            }
+            
+            .features-grid {
+                gap: 30px;
+                margin-top: 40px;
+            }
+            
+            .feature-card {
+                padding: 30px 25px;
+            }
+            
+            .final-cta {
+                padding: 80px 20px;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .section p.lead {
+                font-size: 2.2rem;
+            }
+            
+            .features-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-images {
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+            }
+            
+            .hero-images img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg">
+        <canvas id="aurora-canvas"></canvas>
+    </div>
+    <canvas id="stars-canvas"></canvas>
+    
+    <!-- Logo -->
+    <h1 class="logo">
+        <span class="logo-top">Dreams of</span>
+        <span class="logo-bottom">Aurora</span>
+    </h1>
+    
+    <script>
+        // Aurora WebGL Shader - Based on working Himinn implementation
+        (function() {
+            const canvas = document.getElementById('aurora-canvas');
+            const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+            
+            if (!gl) {
+                console.error('WebGL not supported');
+                return;
+            }
+            
+            // Colors from Swift/Metal implementation - exact SIMD3 values
+            // Deep blue: (0.2, 0.4, 0.9), Teal/cyan: (0.3, 0.9, 0.7), Bright green: (0.4, 1.0, 0.5)
+            const colorStops = [
+                [0.2, 0.4, 0.9],   // Deep blue (bottom)
+                [0.3, 0.9, 0.7],   // Teal/cyan (middle)
+                [0.4, 1.0, 0.5]    // Bright green (top)
+            ];
+            const amplitude = 1.2;
+            const blend = 0.6;
+            const speed = 0.125 * 0.25; // 25% of original speed
+            
+            // Vertex shader
+            const vertexShaderSource = `#version 300 es
+                in vec2 position;
+                void main() {
+                    gl_Position = vec4(position, 0.0, 1.0);
+                }
+            `;
+            
+            // Fragment shader - from working Himinn implementation
+            const fragmentShaderSource = `#version 300 es
+                precision highp float;
+                
+                uniform float uTime;
+                uniform float uAmplitude;
+                uniform vec3 uColorStops[3];
+                uniform vec2 uResolution;
+                uniform float uBlend;
+                
+                out vec4 fragColor;
+                
+                vec3 permute(vec3 x) {
+                    return mod(((x * 34.0) + 1.0) * x, 289.0);
+                }
+                
+                float snoise(vec2 v){
+                    const vec4 C = vec4(
+                        0.211324865405187, 0.366025403784439,
+                        -0.577350269189626, 0.024390243902439
+                    );
+                    vec2 i  = floor(v + dot(v, C.yy));
+                    vec2 x0 = v - i + dot(i, C.xx);
+                    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+                    vec4 x12 = x0.xyxy + C.xxzz;
+                    x12.xy -= i1;
+                    i = mod(i, 289.0);
+                    
+                    vec3 p = permute(
+                        permute(i.y + vec3(0.0, i1.y, 1.0))
+                      + i.x + vec3(0.0, i1.x, 1.0)
+                    );
+                    
+                    vec3 m = max(
+                        0.5 - vec3(
+                            dot(x0, x0),
+                            dot(x12.xy, x12.xy),
+                            dot(x12.zw, x12.zw)
+                        ), 
+                        0.0
+                    );
+                    m = m * m;
+                    m = m * m;
+                    
+                    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+                    vec3 h = abs(x) - 0.5;
+                    vec3 ox = floor(x + 0.5);
+                    vec3 a0 = x - ox;
+                    m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+                    
+                    vec3 g;
+                    g.x  = a0.x  * x0.x  + h.x  * x0.y;
+                    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+                    return 130.0 * dot(m, g);
+                }
+                
+                void main() {
+                    vec2 uv = gl_FragCoord.xy / uResolution;
+                    
+                    // Color ramp based on vertical position
+                    vec3 rampColor;
+                    float normalizedY = uv.y; // 0 at top, 1 at bottom
+                    
+                    if (normalizedY < 0.5) {
+                        // Top half: green (2) to teal (1)
+                        float t = normalizedY * 2.0;
+                        rampColor = mix(uColorStops[2], uColorStops[1], t);
+                    } else {
+                        // Bottom half: teal (1) to blue (0)
+                        float t = (normalizedY - 0.5) * 2.0;
+                        rampColor = mix(uColorStops[1], uColorStops[0], t);
+                    }
+                    
+                    // Aurora wave calculation - matching Metal shader logic
+                    float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
+                    height = exp(height);
+                    height = (uv.y * 2.0 - height + 0.2);
+                    float intensity = 0.6 * height;
+                    
+                    float midPoint = 0.20;
+                    float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
+                    
+                    vec3 auroraColor = intensity * rampColor;
+                    
+                    fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+                }
+            `;
+            
+            // Compile shader
+            function compileShader(source, type) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+            
+            // Create program
+            const vertexShader = compileShader(vertexShaderSource, gl.VERTEX_SHADER);
+            const fragmentShader = compileShader(fragmentShaderSource, gl.FRAGMENT_SHADER);
+            
+            if (!vertexShader || !fragmentShader) return;
+            
+            const program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, fragmentShader);
+            gl.linkProgram(program);
+            
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                console.error('Program link error:', gl.getProgramInfoLog(program));
+                return;
+            }
+            
+            // Setup
+            gl.useProgram(program);
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+            gl.clearColor(0, 0, 0, 0);
+            
+            // Create triangle geometry
+            const positions = new Float32Array([
+                -1, -1,
+                 3, -1,
+                -1,  3
+            ]);
+            
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+            
+            const positionLocation = gl.getAttribLocation(program, 'position');
+            gl.enableVertexAttribArray(positionLocation);
+            gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+            
+            // Get uniform locations
+            const uTimeLocation = gl.getUniformLocation(program, 'uTime');
+            const uAmplitudeLocation = gl.getUniformLocation(program, 'uAmplitude');
+            const uColorStopsLocation = gl.getUniformLocation(program, 'uColorStops');
+            const uResolutionLocation = gl.getUniformLocation(program, 'uResolution');
+            const uBlendLocation = gl.getUniformLocation(program, 'uBlend');
+            
+            let time = 0;
+            
+            function resize() {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                gl.viewport(0, 0, width, height);
+                gl.uniform2f(uResolutionLocation, width, height);
+            }
+            
+            function render() {
+                // Use speed parameter like Swift implementation
+                time += speed;
+                
+                gl.uniform1f(uTimeLocation, time * 0.1);
+                gl.uniform1f(uAmplitudeLocation, amplitude);
+                
+                // Set color stops array (WebGL requires setting each element)
+                // Flatten the array: [r,g,b, r,g,b, r,g,b]
+                const colorArray = new Float32Array([
+                    colorStops[0][0], colorStops[0][1], colorStops[0][2],
+                    colorStops[1][0], colorStops[1][1], colorStops[1][2],
+                    colorStops[2][0], colorStops[2][1], colorStops[2][2]
+                ]);
+                gl.uniform3fv(uColorStopsLocation, colorArray);
+                
+                gl.uniform1f(uBlendLocation, blend);
+                
+                gl.clear(gl.COLOR_BUFFER_BIT);
+                gl.drawArrays(gl.TRIANGLES, 0, 3);
+                
+                requestAnimationFrame(render);
+            }
+            
+            resize();
+            window.addEventListener('resize', resize);
+            render();
+        })();
+    </script>
+    
+    <script>
+        // Simple Twinkling Starry Night Sky
+        (function() {
+            const canvas = document.getElementById('stars-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            let stars = [];
+            let animationTime = 0;
+            
+            // Generate random stars
+            function generateStars() {
+                stars = [];
+                const numStars = 150;
+                
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random(),
+                        y: Math.random() * 0.65, // Only in upper 65% of screen
+                        size: 0.5 + Math.random() * 1.0, // 0.5 to 1.5 pixels
+                        speed: 2 + Math.random() * 3, // 2 to 5 seconds for twinkle cycle
+                        phase: Math.random() * Math.PI * 2 // Random starting phase
+                    });
+                }
+            }
+            
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            function drawStars() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                animationTime += 0.016; // ~60fps
+                
+                stars.forEach((star) => {
+                    const x = star.x * canvas.width;
+                    const y = star.y * canvas.height;
+                    
+                    // Calculate twinkle (opacity varies from 0.3 to 1.0)
+                    const twinkle = (Math.sin(animationTime / star.speed + star.phase) + 1) / 2;
+                    const opacity = 0.3 + (twinkle * 0.7);
+                    
+                    // Draw star
+                    ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(x, y, star.size / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+                
+                requestAnimationFrame(drawStars);
+            }
+            
+            resize();
+            window.addEventListener('resize', () => {
+                resize();
+                generateStars(); // Regenerate stars on resize
+            });
+            
+            generateStars();
+            drawStars();
+        })();
+    </script>
+    
+    <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero section">
+        <a href="https://apps.apple.com/no/app/dreams-of-aurora/id6756571880" class="cta-button top-right" aria-label="Download Dreams of Aurora from the App Store">
+            Download on the App Store
+        </a>
+        
+        <div class="hero-content">
+            <p class="subtitle">Beautiful stories. Soothing narration. Magic every night.</p>
+            <div class="hero-images">
+                <img src="images/ipad3.png" alt="Dreams of Aurora bedtime stories app displayed on iPad showing beautiful aurora background">
+                <img src="images/ipad4.png" alt="Dreams of Aurora app interface on iPad with calming bedtime story narration">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Description -->
+    <section class="section" aria-label="About Dreams of Aurora">
+        <div class="container">
+            <p class="lead">Make bedtime the<br>best part of your day</p>
+            <p>Press play and watch your child's eyes light up as a warm, expressive voice brings stories to life. Professional narration, calming aurora backgrounds, and automatic playback make bedtime effortless and magical.</p>
+            <p><strong>Press play. Relax together. That's it.</strong></p>
+        </div>
+    </section>
+    
+    <!-- Stories Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Stories that spark imagination</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Science</h3>
+                    <p>Frozen lakes that sing, nature's mysteries, animals with superpowers</p>
+                </div>
+                <div class="info-item">
+                    <h3>Heroes</h3>
+                    <p>Jane Goodall, Amelia Earhart, real people when they were kids</p>
+                </div>
+                <div class="info-item">
+                    <h3>Mischief</h3>
+                    <p>Funny, silly adventures that end in giggles</p>
+                </div>
+            </div>
+            <p style="margin-top: 50px; font-size: 1.1rem; opacity: 0.9;">Each story runs 5-9 minutes—the perfect length to wind down.</p>
+        </div>
+    </section>
+    
+    <!-- Why Families Love It -->
+    <section class="section">
+        <div class="container">
+            <h2>Why families love Dreams of Aurora</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <ul>
+                        <li>One beautiful narrator throughout—consistent, warm, engaging</li>
+                        <li>Truly automatic playback—no clicking through pages</li>
+                        <li>Calming aurora background that soothes without distracting</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <ul>
+                        <li>New stories added every month</li>
+                        <li>Works on iPhone and iPad, portrait or landscape</li>
+                        <li>Clean, simple design—nothing to learn, nothing to distract</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Download Dreams of Aurora tonight</h2>
+            <p>Start with 5 free stories and discover the magic of effortless bedtime.</p>
+            <a href="https://apps.apple.com/no/app/dreams-of-aurora/id6756571880" class="cta-button" aria-label="Download Dreams of Aurora from the App Store">
+                Get it on the App Store
+            </a>
+        </div>
+    </section>
+    
+    </main>
+    
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Dreams of Aurora. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
